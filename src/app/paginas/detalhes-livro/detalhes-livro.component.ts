@@ -50,10 +50,12 @@ export class DetalhesLivroComponent extends BaseComponent implements OnInit {
   private registrarTransacao(tipo: TipoTransacao): void {
     if (!this.livro) return;
     const pontos: TransacaoPontos = {
+      id: 0,
       livroId: this.livro.id,
       tipo,
       pontos: this.livro.pontos,
       usuario: { id: this.usuarioId },
+      dataTransacao: null
     };
 
     this.pontosService.registrarPontos(pontos).subscribe({

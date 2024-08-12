@@ -5,28 +5,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { PontosService } from '../../servicos/pontos.service';
 import { BaseComponent } from '../../componentes/base.component';
-
-interface Transacao {
-  id: number;
-  livroId: number;
-  tipo: string;
-  pontos: number;
-  data: string;
-}
+import { TransacaoPontos } from '../../interfaces/transacao-pontos';
+import { CommonModule } from '@angular/common';
+import { TipoTransacao } from '../../interfaces/TipoTransacao';
 
 @Component({
   selector: 'app-historico',
   templateUrl: './historico.component.html',
   styleUrls: ['./historico.component.scss'],
   standalone: true,
-  imports: [MatCardModule, MatButtonModule],
+  imports: [MatCardModule, MatButtonModule, CommonModule],
 })
 export class HistoricoComponent extends BaseComponent implements OnInit {
-  transacoes: Transacao[] = [];
-  transacoesVisiveis: Transacao[] = [];
+  transacoes: TransacaoPontos[] = [];
+  transacoesVisiveis: TransacaoPontos[] = [];
   paginaAtual = 1;
   totalPaginas = 1;
   tamanhoPagina = 5;
+  TipoTransacao = TipoTransacao;
+  // GASTO: TipoTransacao.GANHO
 
   constructor(
     private pontosService: PontosService,
