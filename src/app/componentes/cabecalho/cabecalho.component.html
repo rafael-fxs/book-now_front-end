@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="navegarParaHome()">BookNow</button>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="navegarParaHistorico()">Histórico</button>
+  </mat-menu>
+</mat-toolbar>

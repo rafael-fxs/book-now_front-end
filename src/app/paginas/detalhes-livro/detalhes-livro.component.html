@@ -1,0 +1,15 @@
+<div class="container mt-5 text-center">
+  <h2>{{ livro?.nome }}</h2>
+  <h3>Categoria:</h3>
+  <p>{{ livro?.categoria }}</p>
+  <h3>Descrição:</h3>
+  <p>{{ livro?.descricao }}</p>
+  <div class="d-inline-flex align-content-center justify-content-center flex-column gap-2">
+    <button mat-raised-button color="primary" (click)="finalizarLivro()">
+      Finalizar Livro
+    </button>
+    <button mat-raised-button color="accent" (click)="comprarLivro()">
+      Comprar Livro
+    </button>
+  </div>
+</div>

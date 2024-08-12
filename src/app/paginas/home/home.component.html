@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h2>Livros</h2>
+  @for (livro of livros; track livro.id) {
+  <mat-card
+    class="mb-3"
+    (click)="verDetalhes(livro.id)"
+    style="cursor: pointer"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ livro.nome }}</mat-card-title>
+      <mat-card-subtitle>{{ livro.categoria }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Pontos: {{ livro.pontos }}</p>
+    </mat-card-content>
+  </mat-card>
+  }
+</div>
