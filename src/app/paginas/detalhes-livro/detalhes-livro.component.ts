@@ -53,7 +53,7 @@ export class DetalhesLivroComponent extends BaseComponent implements OnInit {
       livroId: this.livro.id,
       tipo,
       pontos: this.livro.pontos,
-      usuario: { id: 1 },
+      usuario: { id: this.usuarioId },
     };
 
     this.pontosService.registrarPontos(pontos).subscribe({
