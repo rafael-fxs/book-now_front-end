@@ -1,9 +1,11 @@
-<div class="container mt-5 text-center">
+<div class="container mt-4 text-center">
   <h2>{{ livro?.nome }}</h2>
   <h3>Categoria:</h3>
   <p>{{ livro?.categoria }}</p>
   <h3>Descrição:</h3>
   <p>{{ livro?.descricao }}</p>
+  <h3>Pontos:</h3>
+  <p>{{ livro?.pontos }}</p>
   <div class="d-inline-flex align-content-center justify-content-center flex-column gap-2">
     <button mat-raised-button color="primary" (click)="finalizarLivro()">
       Finalizar Livro

@@ -1,5 +1,5 @@
 export const LIVROS_MOCK = [
-    { id: 1, nome: 'Livro 1', categoria: 'A', descricao: 'teste', pontos: 10 },
+    { id: 1, nome: 'Livro 1', categoria: 'A', descricao: 'teste', pontos: 5 },
     { id: 2, nome: 'Livro 2', categoria: 'B', descricao: 'teste', pontos: 20 },
     { id: 3, nome: 'Livro 3', categoria: 'C', descricao: 'teste', pontos: 30 },
     { id: 4, nome: 'Livro 4', categoria: 'D', descricao: 'teste', pontos: 40 },
