@@ -26,7 +26,7 @@ export class HistoricoComponent extends BaseComponent implements OnInit {
   transacoesVisiveis: Transacao[] = [];
   paginaAtual = 1;
   totalPaginas = 1;
-  tamanhoPagina = 10;
+  tamanhoPagina = 5;
 
   constructor(
     private pontosService: PontosService,

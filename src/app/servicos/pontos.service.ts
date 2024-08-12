@@ -19,4 +19,8 @@ export class PontosService {
   registrarPontos(transacaoPontos: TransacaoPontos): Observable<any[]> {
     return this.http.post<any[]>(`${this.baseUrl}`, transacaoPontos);
   }
+
+  obterSaldo(usuarioId: number): Observable<any> {
+    return this.http.get<any[]>(`${this.baseUrl}/saldo/${usuarioId}`);
+  }
 }
